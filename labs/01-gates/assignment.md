@@ -14,21 +14,21 @@ begin
     f_org_o  <= (not(b_i) and a_i) or (not(c_i) and not(b_i));
     f_nand_o <= ((((b_i nand b_i)nand a_i) nand ((b_i nand b_i)nand a_i )) nand (((b_i nand b_i)nand a_i) nand ((b_i nand b_i)nand a_i ))) nand (((b_i nand b_i)nand(c_i nand c_i)));
     f_nor_o  <= ((b_i nor (a_i nor a_i))nor(b_i nor c_i)) nor ((b_i nor (a_i nor a_i))nor(b_i nor c_i));
-end architecture dataflow;
+end architecture dataflow
 ```
 
 3. Complete table with logic functions' values:
 
 | **c** | **b** |**a** | **f(c,b,a)_ORG** | **f(c,b,a)_NAND** | **f(c,b,a)_NOR** |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| 0 | 0 | 0 |  |  |  |
-| 0 | 0 | 1 |  |  |  |
-| 0 | 1 | 0 |  |  |  |
-| 0 | 1 | 1 |  |  |  |
-| 1 | 0 | 0 |  |  |  |
-| 1 | 0 | 1 |  |  |  |
-| 1 | 1 | 0 |  |  |  |
-| 1 | 1 | 1 |  |  |  |
+| 0 | 0 | 0 | 1 | 1 | 1 |
+| 0 | 0 | 1 | 1 | 1 | 1 |
+| 0 | 1 | 0 | 0 | 0 | 0 | 
+| 0 | 1 | 1 | 0 | 0 | 0 |  
+| 1 | 0 | 0 | 0 | 0 | 0 |
+| 1 | 0 | 1 | 1 | 1 | 1 |  
+| 1 | 1 | 0 | 0 | 0 | 0 |  
+| 1 | 1 | 1 | 0 | 0 | 0 |  
 
 ### Distributive laws
 
