@@ -1,4 +1,4 @@
-# Lab 2: YOUR_FIRSTNAME LASTNAME
+# Lab 2: Šimon Špánik
 
 ### 2-bit comparator
 
@@ -6,16 +6,15 @@
 
    Greater than:
 
-   ![K-maps](images/kmap_empty.png)
+   ![B g A](https://user-images.githubusercontent.com/99726477/155887139-491d2bc8-d9de-4e19-b0db-ba059ca9e463.PNG)
 
    Less than:
 
-   ![K-maps](images/kmap_empty.png)
+   ![B l A](https://user-images.githubusercontent.com/99726477/155887145-95719413-5a29-4c26-9e0e-dae9470a6c53.PNG)
 
 2. Equations of simplified SoP (Sum of the Products) form of the "greater than" function and simplified PoS (Product of the Sums) form of the "less than" function.
 
-   ![Logic functions](images/comparator_min.png)
-
+   ![image](https://user-images.githubusercontent.com/99726477/155887119-60e91d3d-1e67-4921-9b7c-61b4b856c633.png)
 ### 4-bit comparator
 
 1. Listing of VHDL stimulus process from testbench file (`testbench.vhd`) with at least one assert (use BCD codes of your student ID digits as input combinations). Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
