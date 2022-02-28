@@ -44,6 +44,11 @@
     end process p_stimulus;
 ```
 
+  2-bit comparator link: https://www.edaplayground.com/x/thH_
+  + screenshot: ![image](https://user-images.githubusercontent.com/99726477/155995921-c15328dd-8aaa-4990-8226-f1eef474876d.png)
+
+  
+
 2. Text console screenshot during your simulation, including reports.
 
    ![image](https://user-images.githubusercontent.com/99726477/155330053-fe5c5a28-c323-40a8-951f-1e7da239ac28.png)
