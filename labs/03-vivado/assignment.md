@@ -13,6 +13,11 @@ begin
 end architecture Behavioral;
 ```
 [code.txt](https://github.com/xspani02/digital-electronics-1/files/8169938/code.txt)
+ if (sel_i = "00") then f_o <= a_i;
+   elsif (sel_i = "01") then f_o <= b_i;
+   elsif (sel_i = "10") then f_o <= c_i;
+   elsif (sel_i = "11") then f_o <= d_i;
+   end if;
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
