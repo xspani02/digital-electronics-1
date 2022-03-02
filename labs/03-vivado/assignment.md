@@ -12,9 +12,10 @@ begin
 
 end architecture Behavioral;
 ```
+[code.txt](https://github.com/xspani02/digital-electronics-1/files/8169938/code.txt)
 
 2. Screenshot with simulated time waveforms. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
-[code.txt](https://github.com/xspani02/digital-electronics-1/files/8169827/code.txt)
+
 
    ![your figure]()
 
