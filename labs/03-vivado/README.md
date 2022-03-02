@@ -7,6 +7,7 @@
   CZ.02.2.69/0.0/0.0/18_056/0013325
 </p>
 -->
+[nexys-a7-sch.pdf](https://github.com/xspani02/digital-electronics-1/files/8169480/nexys-a7-sch.pdf)
 
 ### Learning objectives
 
