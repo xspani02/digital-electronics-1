@@ -85,6 +85,8 @@
 
    ![image](https://user-images.githubusercontent.com/99726477/158023381-02758a2e-8da5-4f6f-9398-981508630b43.png)
 
+link to my EDA playground code: https://www.edaplayground.com/x/tLAV
+
 ### LED(7:4) indicators
 
 1. Listing of LEDs(7:4) part of VHDL architecture from source file `top.vhd`. Try to write logic functions as simple as possible. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
