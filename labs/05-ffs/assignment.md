@@ -8,7 +8,7 @@
 architecture Behavioral of t_ff_rst is
     -- It must use this local signal instead of output ports
     -- because "out" ports cannot be read within the architecture
-    signal s_q : std_logic;
+    signal q_n : std_logic;
 begin
     --------------------------------------------------------
     -- p_t_ff_rst:
@@ -37,8 +37,8 @@ begin
     end process p_t_ff_rst;
 
     -- Output ports are permanently connected to local signal
-    q     <= s_q;
-    q_bar <= not s_q;
+    --q     <= s_q;
+    --q_bar <= not s_q;
 end architecture Behavioral;
 ```
 
