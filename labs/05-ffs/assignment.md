@@ -1,5 +1,4 @@
-# Lab 5: YOUR_FIRSTNAME LASTNAME
-
+# Lab 5: Šimon Špánik
 ### Flip-flops
 
 1. Listing of VHDL architecture for T-type flip-flop. Always use syntax highlighting, meaningful comments, and follow VHDL guidelines:
