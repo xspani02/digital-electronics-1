@@ -27,19 +27,19 @@
 
                     when "10" =>
                         s_hex <= data2_i;
-						dp_o <= dp_i(2);
-						dig_o <= "1011";
+			dp_o <= dp_i(2);
+			dig_o <= "1011";
                         -- DEFINE ALL OUTPUTS FOR "10" HERE
 
                     when "01" =>
                     	s_hex <= data1_i;
-						dp_o <= dp_i(1);
-						dig_o <= "1101";
+			dp_o <= dp_i(1);
+			dig_o <= "1101";
                         -- DEFINE ALL OUTPUTS FOR "01" HERE
 
                     when others =>
                     	s_hex <= data0_i;
-						dp_o <= dp_i(0);
+			dp_o <= dp_i(0);
                         dig_o <= "1110";
                         -- DEFINE ALL OUTPUTS FOR "00" HERE
                 end case;
