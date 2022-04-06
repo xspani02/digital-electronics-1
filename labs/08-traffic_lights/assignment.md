@@ -31,7 +31,7 @@
                     -- If the current state is STOP1, then wait 1 sec
                     -- and move to the next GO_WAIT state.
                     when STOP1 =>
-                        -- Count up to c_DELAY_1SEC
+                        
                         if (s_cnt < c_DELAY_1SEC) then
                             s_cnt <= s_cnt + 1;
                         else
@@ -42,7 +42,60 @@
                         end if;
 
                     when WEST_GO =>
-                        -- WRITE OTHER STATES HERE
+                         
+                        if (s_cnt < c_DELAY_4SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= WEST_WAIT;
+                            -- Reset local counter value
+                            s_cnt <= c_ZERO;
+                        end if;
+                        
+                    when WEST_WAIT =>
+                        
+                        if (s_cnt < c_DELAY_2SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= STOP2;
+                            -- Reset local counter value
+                            s_cnt <= c_ZERO;
+                        end if;
+                        
+                     when STOP2 =>
+                       
+                        if (s_cnt < c_DELAY_1SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= SOUTH_GO;
+                            -- Reset local counter value
+                            s_cnt <= c_ZERO;
+                        end if;
+                        
+                      when SOUTH_GO =>
+                      
+                        if (s_cnt < c_DELAY_4SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= SOUTH_WAIT;
+                            -- Reset local counter value
+                            s_cnt <= c_ZERO;
+                        end if;
+                      
+                      when SOUTH_WAIT =>
+                      
+                        if (s_cnt < c_DELAY_2SEC) then
+                            s_cnt <= s_cnt + 1;
+                        else
+                            -- Move to the next state
+                            s_state <= STOP1;
+                            -- Reset local counter value
+                            s_cnt <= c_ZERO;
+                        end if;
+                       
 
 
                     -- It is a good programming practice to use the 
@@ -59,4 +112,4 @@
 
 3. Screenshot with simulated time waveforms. The full functionality of the entity must be verified. Always display all inputs and outputs (display the inputs at the top of the image, the outputs below them) at the appropriate time scale!
 
-   ![your figure]()
+  ![image](https://user-images.githubusercontent.com/99726477/161969434-473da37f-d8c5-47cc-94aa-139d14a4019e.png)
