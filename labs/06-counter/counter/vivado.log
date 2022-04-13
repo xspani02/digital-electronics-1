@@ -1,0 +1,893 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Apr 13 13:48:51 2022
+# Process ID: 3520
+# Current directory: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6864 D:\Documents\xspani02\digital-electronics-1\labs\06-counter\counter\counter.xpr
+# Log file: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/vivado.log
+# Journal file: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/APPZ/Xilinx/Vivado/2020.1/data/ip'.
+update_compile_order -fileset sources_1
+set_property top tb_clock_enable [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1023.660 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1023.660 ; gain = 0.000
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+
+****** Webtalk v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xsim.dir/tb_clock_enable_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xsim.dir/tb_clock_enable_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Apr 13 13:51:31 2022. For additional details about this file, please refer to the WebTalk help file at C:/APPZ/Xilinx/Vivado/2020.1/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Wed Apr 13 13:51:31 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:06 . Memory (MB): peak = 1023.660 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '6' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:05 ; elapsed = 00:00:10 . Memory (MB): peak = 1023.660 ; gain = 0.000
+set_property -name {xsim.simulate.runtime} -value {3000000000ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3000000000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3000000000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1023.660 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=1000)\]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3000000000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3000000000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1046.934 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3000000000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3000000000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1046.934 ; gain = 0.000
+set_property -name {xsim.simulate.runtime} -value {1000ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [clock_enable_default]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1080.422 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:06 . Memory (MB): peak = 1167.605 ; gain = 3.086
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+launch_simulation: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1167.605 ; gain = 0.000
+set_property -name {xsim.simulate.runtime} -value {3s} -objects [get_filesets sim_1]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+ERROR: [VRFC 10-2989] 's' is not declared [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:54]
+ERROR: [VRFC 10-2123] 0 definitions of operator "<" match here [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:54]
+ERROR: [VRFC 10-3782] unit 'testbench' ignored due to previous errors [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:25]
+INFO: [VRFC 10-3070] VHDL file 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+ERROR: [VRFC 10-2989] 's' is not declared [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:54]
+ERROR: [VRFC 10-2123] 0 definitions of operator "<" match here [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:54]
+ERROR: [VRFC 10-3782] unit 'testbench' ignored due to previous errors [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:25]
+INFO: [VRFC 10-3070] VHDL file 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3s
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3s
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 1181.555 ; gain = 0.000
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+ERROR: [VRFC 10-985] literal 7500000000 exceeds maximum integer value [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:54]
+ERROR: [VRFC 10-3782] unit 'testbench' ignored due to previous errors [D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd:25]
+INFO: [VRFC 10-3070] VHDL file 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd' ignored due to errors
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xvhdl.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim/xvhdl.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_clock_enable' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj tb_clock_enable_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sources_1/new/clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'clock_enable'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_clock_enable'
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+"xelab -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log"
+Vivado Simulator 2020.1
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/APPZ/Xilinx/Vivado/2020.1/bin/unwrapped/win64.o/xelab.exe -wto efa159528b6f44b8b0e4078baf0c5ea8 --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot tb_clock_enable_behav xil_defaultlib.tb_clock_enable -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling architecture behavioral of entity xil_defaultlib.clock_enable [\clock_enable(g_max=10)\]
+Compiling architecture testbench of entity xil_defaultlib.tb_clock_enable
+Built simulation snapshot tb_clock_enable_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_clock_enable_behav -key {Behavioral:sim_1:Functional:tb_clock_enable} -tclbatch {tb_clock_enable.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.1
+Time resolution is 1 ps
+source tb_clock_enable.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 3s
+Note: Stimulus process started
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+Note: Stimulus process finished
+Time: 0 ps  Iteration: 0  Process: /tb_clock_enable/p_stimulus  File: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.srcs/sim_1/new/tb_clock_enable.vhd
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_clock_enable_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 3s
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1181.555 ; gain = 0.000
+set_property top top [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+update_compile_order -fileset sim_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:04:44 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:04:44 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1181.555 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AA7DE2A
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:06:50 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:06:50 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+close_hw_manager
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:09:54 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:09:54 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:13:35 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:13:35 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:17:22 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:17:22 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2503.176 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AA7DE2A
+set_property PROGRAM.FILE {D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw_manager
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:32:10 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:32:10 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:33:52 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:33:52 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.1
+  **** Build date : May 27 2020 at 20:24:38
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+****** Xilinx cs_server v2020.1.0
+  **** Build date : May 14 2020-03:10:29
+    ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 2515.605 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210292AA7DE2A
+set_property PROGRAM.FILE {D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+current_hw_device [get_hw_devices xc7a50t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a50t_0]
+set_property PROGRAM.FILE {D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/top.bit} [get_hw_devices xc7a50t_0]
+program_hw_devices [get_hw_devices xc7a50t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a50t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a50t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:42:05 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:42:05 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+[Wed Apr 13 14:43:05 2022] Launched synth_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/synth_1/runme.log
+[Wed Apr 13 14:43:05 2022] Launched impl_1...
+Run output will be captured here: D:/Documents/xspani02/digital-electronics-1/labs/06-counter/counter/counter.runs/impl_1/runme.log
+save_project_as project_SVS D:/Documents/xspani02/digital-electronics-1/projekt/project_SVS -force
+import_files
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'constrs_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'constrs_1'
+INFO: [filemgmt 20-334] All file(s) are already imported in fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sim_1'
+INFO: [filemgmt 20-348] Importing the appropriate files for fileset: 'sources_1'
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Apr 13 14:47:52 2022...

@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Apr 13 14:48:00 2022
+# Process ID: 2264
+# Current directory: D:/Documents/xspani02/digital-electronics-1/projekt/project_SVS
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11400 D:\Documents\xspani02\digital-electronics-1\projekt\project_SVS\project_SVS.xpr
+# Log file: D:/Documents/xspani02/digital-electronics-1/projekt/project_SVS/vivado.log
+# Journal file: D:/Documents/xspani02/digital-electronics-1/projekt/project_SVS\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Documents/xspani02/digital-electronics-1/projekt/project_SVS/project_SVS.xpr
+update_compile_order -fileset sources_1
