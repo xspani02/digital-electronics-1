@@ -1,4 +1,4 @@
-# YOUR_PROJECT_TITLE
+# Digital clock (hh mm ss) with time/alarm setting.
 
 ### Team members
 
