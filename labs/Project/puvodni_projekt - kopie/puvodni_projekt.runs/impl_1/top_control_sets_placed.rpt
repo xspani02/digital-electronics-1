@@ -1,0 +1,227 @@
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
+| Date         : Mon May  2 13:40:35 2022
+| Host         : LAPTOP-9IM6L6CH running 64-bit major release  (build 9200)
+| Command      : report_control_sets -verbose -file top_control_sets_placed.rpt
+| Design       : top
+| Device       : xc7a50ti
+------------------------------------------------------------------------------------
+
+Control Set Information
+
+Table of Contents
+-----------------
+1. Summary
+2. Histogram
+3. Flip-Flop Distribution
+4. Detailed Control Set Information
+
+1. Summary
+----------
+
++----------------------------------------------------------+-------+
+|                          Status                          | Count |
++----------------------------------------------------------+-------+
+| Total control sets                                       |   149 |
+|    Minimum number of control sets                        |   149 |
+|    Addition due to synthesis replication                 |     0 |
+|    Addition due to physical synthesis replication        |     0 |
+| Unused register locations in slices containing registers |   983 |
++----------------------------------------------------------+-------+
+* Control sets can be merged at opt_design using control_set_merge or merge_equivalent_drivers
+** Run report_qor_suggestions for automated merging and remapping suggestions
+
+
+2. Histogram
+------------
+
++--------------------+-------+
+|       Fanout       | Count |
++--------------------+-------+
+| Total control sets |   149 |
+| >= 0 to < 4        |   138 |
+| >= 4 to < 6        |     1 |
+| >= 6 to < 8        |     0 |
+| >= 8 to < 10       |     1 |
+| >= 10 to < 12      |     2 |
+| >= 12 to < 14      |     0 |
+| >= 14 to < 16      |     0 |
+| >= 16              |     7 |
++--------------------+-------+
+* Control sets can be remapped at either synth_design or opt_design
+
+
+3. Flip-Flop Distribution
+-------------------------
+
++--------------+-----------------------+------------------------+-----------------+--------------+
+| Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
++--------------+-----------------------+------------------------+-----------------+--------------+
+| No           | No                    | No                     |              80 |           29 |
+| No           | No                    | Yes                    |              45 |           45 |
+| No           | Yes                   | No                     |              90 |           63 |
+| Yes          | No                    | No                     |              14 |            8 |
+| Yes          | No                    | Yes                    |              44 |           44 |
+| Yes          | Yes                   | No                     |             160 |           40 |
++--------------+-----------------------+------------------------+-----------------+--------------+
+
+
+4. Detailed Control Set Information
+-----------------------------------
+
++---------------------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+--------------+
+|                          Clock Signal                         |                       Enable Signal                       |                       Set/Reset Signal                       | Slice Load Count | Bel Load Count | Bels / Slice |
++---------------------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+--------------+
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_msb_reg[1]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_msb_reg[1]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[1]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_msb_reg[0]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[0]_C_1          |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/ALARM_SOUNDING_PROCESS.flash_i_2_n_0            |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[1]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[0]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[2]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_msb_reg[1]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_msb_reg[2]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_msb_reg[0]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[3]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[1]_C_1                 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[3]_C_1                 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[2]_C_1                 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_hours_msb_reg[3]_C_1                |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[0]_C_1                 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_msb_reg[2]_C_1                 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_msb_reg[0]_C_1                 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_msb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_msb_reg[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/clock/clock_mins_msb_reg[3]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_lsb_reg[2]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[2]_P_2           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_lsb_reg[0]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_lsb_reg[2]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_msb_reg[0]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_lsb_reg[3]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_msb_reg[1]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_lsb_reg[1]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_msb_reg[2]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/s_reset                       | driver_seg_4/clock_setter/clock_sec_msb_reg[3]_LDC_i_1_n_0   |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_msb_reg[3]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[3]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_msb_reg[0]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[0]_P_2           |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_lsb_reg[3]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[3]_P_2           |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_msb_reg[2]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[2]_P_2           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_msb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_msb_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_msb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_msb_reg[2]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_msb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_msb_reg[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_msb_reg[3]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[3]_P_2           |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_lsb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_lsb_reg[0]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_lsb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_lsb_reg[2]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_lsb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_lsb_reg[1]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_hours_lsb[3]_P_i_1__0_n_0 | driver_seg_4/clock_setter/clock_hours_lsb_reg[3]_LDC_i_1_n_0 |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_lsb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_lsb_reg[0]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_lsb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_lsb_reg[3]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_lsb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_lsb_reg[1]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_lsb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_lsb_reg[2]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_msb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_msb_reg[0]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_msb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_msb_reg[1]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_msb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_msb_reg[2]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/clock_setter/clock_mins_msb[3]_P_i_1__0_n_0  | driver_seg_4/clock_setter/clock_mins_msb_reg[3]_LDC_i_1_n_0  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_msb_reg[1]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[1]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[2]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[3]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[1]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[0]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[0]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[3]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[2]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[0]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[1]_C_1         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[1]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[2]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[3]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[2]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[0]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[1]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[0]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[0]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[3]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[3]_C_1          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[1]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[1]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[2]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[3]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock_setter/clock_sec_msb_reg[2]_P_2           |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[0]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[1]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[2]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[3]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_lsb[3]_P_i_1_n_0           | driver_seg_4/clock/clock_hours_lsb_reg[0]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_lsb[3]_P_i_1_n_0           | driver_seg_4/clock/clock_hours_lsb_reg[2]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_lsb[3]_P_i_1_n_0           | driver_seg_4/clock/clock_hours_lsb_reg[3]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_lsb[3]_P_i_1_n_0           | driver_seg_4/clock/clock_hours_lsb_reg[1]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_msb                        | driver_seg_4/clock/clock_hours_msb_reg[2]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_msb                        | driver_seg_4/clock/clock_hours_msb_reg[0]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_msb                        | driver_seg_4/clock/clock_hours_msb_reg[1]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_hours_msb                        | driver_seg_4/clock/clock_hours_msb_reg[3]_LDC_i_1_n_0        |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_lsb                         | driver_seg_4/clock/clock_mins_lsb_reg[2]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_lsb                         | driver_seg_4/clock/clock_mins_lsb_reg[1]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_lsb                         | driver_seg_4/clock/clock_mins_lsb_reg[0]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_lsb                         | driver_seg_4/clock/clock_mins_lsb_reg[3]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_msb                         | driver_seg_4/clock/clock_mins_msb_reg[2]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_msb                         | driver_seg_4/clock/clock_mins_msb_reg[1]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_msb                         | driver_seg_4/clock/clock_mins_msb_reg[0]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/clock_mins_msb                         | driver_seg_4/clock/clock_mins_msb_reg[3]_LDC_i_1_n_0         |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/eqOp                                   | driver_seg_4/clock/clock_sec_msb_reg[0]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/eqOp                                   | driver_seg_4/clock/clock_sec_msb_reg[2]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/eqOp                                   | driver_seg_4/clock/clock_sec_msb_reg[3]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  temp_BUFG                                                    | driver_seg_4/clock/eqOp                                   | driver_seg_4/clock/clock_sec_msb_reg[1]_LDC_i_1_n_0          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_lsb_reg[0]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[0]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_lsb_reg[2]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[2]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_lsb_reg[1]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[1]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_lsb_reg[3]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_lsb_reg[3]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_lsb_reg[0]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[0]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_msb_reg[0]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_msb_reg[0]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_msb_reg[2]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_msb_reg[2]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_msb_reg[3]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_msb_reg[3]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_hours_msb_reg[1]_LDC_i_1_n_0 |                                                           | driver_seg_4/clock/clock_hours_msb_reg[1]_C_1                |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_lsb_reg[3]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[3]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_lsb_reg[1]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[1]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_lsb_reg[2]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_lsb_reg[2]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_msb_reg[0]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_msb_reg[0]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_msb_reg[1]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_msb_reg[1]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_msb_reg[2]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_msb_reg[2]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_lsb_reg[0]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[0]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_lsb_reg[2]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[2]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_msb_reg[0]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_msb_reg[0]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_lsb_reg[3]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[3]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_msb_reg[1]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_msb_reg[1]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_lsb_reg[1]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_lsb_reg[1]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_mins_msb_reg[3]_LDC_i_1_n_0  |                                                           | driver_seg_4/clock/clock_mins_msb_reg[3]_C_1                 |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_msb_reg[2]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_msb_reg[2]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock_setter/clock_sec_msb_reg[3]_LDC_i_1_n_0   |                                                           | driver_seg_4/clock/clock_sec_msb_reg[3]_C_1                  |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_lsb_reg[0]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[0]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_msb_reg[2]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[2]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_msb_reg[0]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[0]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_lsb_reg[2]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[2]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_lsb_reg[3]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[3]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_msb_reg[1]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[1]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_lsb_reg[1]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_lsb_reg[1]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_lsb_reg[2]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[2]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_lsb_reg[1]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[1]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_lsb_reg[0]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[0]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_hours_msb_reg[3]_LDC_i_1_n_0        |                                                           | driver_seg_4/clock_setter/clock_hours_msb_reg[3]_C_1         |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_lsb_reg[3]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_lsb_reg[3]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_lsb_reg[0]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[0]_P_2           |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_sec_lsb_reg[1]_LDC_i_1_n_0          |                                                           | driver_seg_4/clock_setter/clock_sec_lsb_reg[1]_P_2           |                1 |              1 |         1.00 |
+|  driver_seg_4/clock/clock_mins_msb_reg[2]_LDC_i_1_n_0         |                                                           | driver_seg_4/clock_setter/clock_mins_msb_reg[2]_C_1          |                1 |              1 |         1.00 |
+|  driver_seg_4/segDriver/uut2/slow_clock                       |                                                           | driver_seg_4/segDriver/display_selection[1]                  |                2 |              3 |         1.50 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/alarm_setter/alarm_hours_lsb[3]_i_1_n_0      |                                                              |                3 |              4 |         1.33 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/disp_sec_msb[3]_i_1_n_0                         |                5 |              8 |         1.60 |
+|  temp_BUFG                                                    | driver_seg_4/flash                                        |                                                              |                5 |             10 |         2.00 |
+|  driver_seg_4/segDriver/uut2/slow_clock                       |                                                           |                                                              |                3 |             10 |         3.33 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           | driver_seg_4/divider/temp_0                                  |                8 |             31 |         3.88 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNC_debouncer/count0_carry__2_n_3           | driver_seg_4/BTNC_debouncer/reset                            |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTND_debouncer/count0_carry__2_n_3           | driver_seg_4/BTND_debouncer/reset                            |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNL_debouncer/count0_carry__2_n_3           | driver_seg_4/BTNL_debouncer/reset                            |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNR_debouncer/count0_carry__2_n_3           | driver_seg_4/BTNR_debouncer/reset                            |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG                                          | driver_seg_4/BTNU_debouncer/count0_carry__2_n_3           | driver_seg_4/BTNU_debouncer/reset                            |                8 |             32 |         4.00 |
+|  CLK100MHZ_IBUF_BUFG                                          |                                                           |                                                              |               26 |             70 |         2.69 |
++---------------------------------------------------------------+-----------------------------------------------------------+--------------------------------------------------------------+------------------+----------------+--------------+
+
+
